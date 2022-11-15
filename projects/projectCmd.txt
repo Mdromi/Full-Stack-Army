@@ -1,0 +1,6 @@
+touch server.js .env default.env .gitignore
+npm init -y
+npm i cors dotenv express morgan
+npm i -D nodemon
+mkdir app routes models controller service middleware util db config log error test public
+

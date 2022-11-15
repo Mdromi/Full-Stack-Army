@@ -1,0 +1,15 @@
+{
+  "name": "06.object-deep-dive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "6.1arrayOperations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

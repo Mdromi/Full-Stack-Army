@@ -1,0 +1,22 @@
+=================
+Before The Start
+=================
+1.Open File. [Learn Code > Web Development > Full Stack Army]
+2.Open VS Code Editor. [ ]
+3.Open YouTube.[stack larner]
+5.Open Git Bash
+===================
+Learning Speed : Start Date: 24/06/2022
+==================
+
+04.Programming Fundamentals
+05.Array Operations
+06.Object Deep Dive
+08.Understand JavaScript Functions
+09.Functional Programming in JavaScript
+11.Async Iterator or Generator in JavaScript or Project Requirements
+
+
+
+
+
