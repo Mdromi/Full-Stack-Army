@@ -4,6 +4,7 @@ import Social from '../social/Social'
 import DynamicForm from '../dynamic-form/DynamicForm'
 import Checkbox from '../Lecture-36/checkbox'
 import ProductList from '../Lecture-36/productList'
+import TODO from '../Lecture-37/todo'
 
 function Routers() {
   return (
@@ -15,6 +16,7 @@ function Routers() {
           <Route path="/dynamic-form" element={<DynamicForm />} />
           <Route path="/checkbox" element={<Checkbox />} />
           <Route path="/productList" element={<ProductList />} />
+          <Route path="/todo" element={<TODO />} />
         </Routes>
       </header>
     </Router>

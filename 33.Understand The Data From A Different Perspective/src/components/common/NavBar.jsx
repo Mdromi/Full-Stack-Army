@@ -22,6 +22,9 @@ function NavBar() {
           <Nav.Link as={Link} to="/productList">
           ProductList
           </Nav.Link>
+          <Nav.Link as={Link} to="/todo">
+          TODO
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
