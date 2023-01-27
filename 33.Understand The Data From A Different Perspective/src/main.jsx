@@ -6,8 +6,14 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas, fab);
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// )
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>,
 )
