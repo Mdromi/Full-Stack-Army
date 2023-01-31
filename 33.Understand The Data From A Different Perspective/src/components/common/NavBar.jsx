@@ -25,6 +25,9 @@ function NavBar() {
           <Nav.Link as={Link} to="/todo">
           TODO
           </Nav.Link>
+          <Nav.Link as={Link} to="/calculator">
+          Calculator
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
