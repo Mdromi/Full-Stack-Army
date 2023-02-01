@@ -6,6 +6,7 @@ import Checkbox from '../Lecture-36/checkbox'
 import ProductList from '../Lecture-36/productList'
 import TODO from '../Lecture-37/todo'
 import Calculator from '../Lecture-38-39/calculator'
+import ContactForm from '../Lecture-40/ContactForm'
 
 function Routers() {
   return (
@@ -19,6 +20,7 @@ function Routers() {
           <Route path="/productList" element={<ProductList />} /> 
           <Route path="/todo" element={<TODO />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/contactForm" element={<ContactForm />} />
         </Routes>
       </header>
     </Router>

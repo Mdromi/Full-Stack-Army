@@ -28,6 +28,9 @@ function NavBar() {
           <Nav.Link as={Link} to="/calculator">
           Calculator
           </Nav.Link>
+          <Nav.Link as={Link} to="/contactForm">
+          ContactForm
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
