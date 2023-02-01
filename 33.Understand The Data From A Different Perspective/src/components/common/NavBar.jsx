@@ -27,9 +27,12 @@ function NavBar() {
           </Nav.Link>
           <Nav.Link as={Link} to="/calculator">
           Calculator
-          </Nav.Link>
+          </Nav.Link> 
           <Nav.Link as={Link} to="/contactForm">
           ContactForm
+          </Nav.Link>
+          <Nav.Link as={Link} to="/useEffect">
+          UseEffect
           </Nav.Link>
         </Nav>
       </Container>
