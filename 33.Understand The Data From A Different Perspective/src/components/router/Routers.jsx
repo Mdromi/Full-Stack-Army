@@ -8,6 +8,7 @@ import TODO from '../Lecture-37/todo'
 import Calculator from '../Lecture-38-39/calculator' 
 import ContactForm from '../Lecture-40/ContactForm'
 import UseEffect from '../Lecture-41/UseEffect'
+import CustomHooks from "../Lecture-42/CustomHooks";
 
 function Routers() {
   return (
@@ -21,8 +22,9 @@ function Routers() {
           <Route path="/productList" element={<ProductList />} /> 
           <Route path="/todo" element={<TODO />} />
           <Route path="/calculator" element={<Calculator />} />
-          <Route path="/contactForm" element={<ContactForm />} />
+          <Route path="/contactForm" element={<ContactForm />} /> 
           <Route path="/useEffect" element={<UseEffect />} />
+          <Route path="/customHooks" element={<CustomHooks />} />
         </Routes>
       </header>
     </Router>
