@@ -13,7 +13,7 @@ const init = {
 const validate = values => {
   const errors = {};
   
-  if(values.firstName) errors.firstName = 'First Name is Required';
+  if(!values.firstName) errors.firstName = 'First Name is Required';
   if (!values.lastName) errors.lastName = 'Last Name is Required';
 	if (!values.email) errors.email = 'Email is Required';
 
