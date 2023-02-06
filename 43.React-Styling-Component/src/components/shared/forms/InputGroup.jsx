@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import TextInput from '../ui/inputs/TextInput';
-import Label from '../ui/inputs/Label';
+import TextInput from '../../ui/inputs/TextInput';
+import Label from '../../ui/inputs/Label';
 
 const Container = styled.div`
     width: 100%;
