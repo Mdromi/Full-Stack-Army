@@ -1,21 +1,24 @@
 import { formatDistance } from "date-fns";
 import useClock from "../../hooks/useClock";
+import useTimer from "../../hooks/useTimer";
 import ClockActions from "../shared/clock-actions";
 import ClockDisplay from "../shared/clock-display";
 
 const ClockListItem = ({ clock, updateClock, deleteClock, localClock }) => {
   const { date } = useClock(clock.timezone, clock.offset);
-  if (!date) return null;
+  const timer = useTimer(date);
+
+  if (!date || !timer) return null;
 
   return (
     <div>
       <ClockDisplay
-        date={date}
+        date={timer}
         offset={clock.offset}
         timezone={clock.timezone}
         title={clock.title}
       />
-      <h3>Time Difference: {formatDistance(localClock, date)}</h3>
+      <h3>Time Difference: {formatDistance(localClock, timer)}</h3>
       <ClockActions
         clock={clock}
         updateClock={updateClock}

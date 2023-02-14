@@ -10,11 +10,11 @@ const useClock = (timezone, offset) => {
   const [utc, setUtc] = useState(null);
 
   useEffect(() => {
-    let d = new Date();
-    const lo = d.getTimezoneOffset();
-    d = addMinutes(d, lo);
-    setUtc(d);
-    setLocalOffset(lo);
+    let newDate = new Date();
+    const timezoneOffset = newDate.getTimezoneOffset();
+    newDate = addMinutes(newDate, timezoneOffset);
+    setUtc(newDate);
+    setLocalOffset(timezoneOffset);
   }, []);
 
   useEffect(() => {
