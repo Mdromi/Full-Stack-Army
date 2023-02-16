@@ -1,11 +1,9 @@
 import { useState } from "react";
 import shortid from "shortid";
-import LocalClock from "./components/local-clock/index";
 import ClockList from "./components/clock-list/index";
-
+import LocalClock from "./components/local-clock/index";
 
 // Test functionality
-import  testEvent  from "./test/testFunctionality";
 
 const LOCAL_CLOCK_INIT = {
   title: "My Clock",
@@ -42,7 +40,6 @@ function App() {
   };
 
   const deleteClock = (id) => {
-    console.log("id", id);
     const updatedClocks = clocks.filter((clock) => clock.id !== id);
     setClocks(updatedClocks);
   };
