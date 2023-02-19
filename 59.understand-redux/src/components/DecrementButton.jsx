@@ -1,11 +1,11 @@
 import { useStoreActions } from "easy-peasy";
 
 const DecrementButton = () => {
-  const { count, history } = useStoreActions((actions) => actions.count);
+  const { count, history } = useStoreActions((actions) => actions);
 
   const handleClick = () => {
     count.decrement(1);
-    history.clearHistory({ actions: "decrement", count: 1 });
+    history.addHistory({ actions: "decrement", count: 1 });
   };
   return <button onClick={handleClick}>-</button>;
 };

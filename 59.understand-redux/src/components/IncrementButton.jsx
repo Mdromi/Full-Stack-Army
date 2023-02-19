@@ -1,7 +1,7 @@
 import { useStoreActions } from "easy-peasy";
 
 const IncrementButton = () => {
-  const { count, history } = useStoreActions((actions) => actions.count);
+  const { count, history } = useStoreActions((actions) => actions);
 
   const handleClick = () => {
     count.increment(1);

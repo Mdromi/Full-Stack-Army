@@ -6,7 +6,7 @@ const History = () => {
   return (
     <div>
       <p>
-        History <button onClick={clearHistory()}>Clear History</button>
+        History <button onClick={() => clearHistory()}>Clear History</button>
       </p>
       <ul>
         {items &&

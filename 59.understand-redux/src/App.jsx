@@ -1,4 +1,6 @@
 import Count from "./components/Count";
+import DecrementButton from "./components/DecrementButton";
+import History from "./components/History";
 import IncrementButton from "./components/IncrementButton";
 
 function App() {
@@ -8,8 +10,8 @@ function App() {
     <div className="App">
       <Count />
       <IncrementButton />
-      {/* <DecrementButton />
-      <History /> */}
+      <DecrementButton />
+      <History />
     </div>
   );
 }
