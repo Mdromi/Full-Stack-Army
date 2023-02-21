@@ -1,3 +1,5 @@
+import { useStoreActions } from "easy-peasy";
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 
 import Container from "@mui/material/Container";
@@ -10,6 +12,13 @@ import PlaylistCardItem from "./components/playlist-card-item/playlist-card-item
 import usePlaylist from "./hooks/usePlaylist";
 
 const HomePage = ({ playlistArray }) => {
+  const playlist = useStoreActions((actions) => actions.playlist);
+  const Id = "PLG7HKKbpE8RINBexLm8zmniqvXoxS7eqv";
+  useEffect(() => {
+    playlist.getPlaylistData(Id);
+    console.log("This Called", playlist.getPlaylistData(Id));
+  }, []);
+
   return (
     <Container maxWidth={"md"} sx={{ marginTop: 16 }}>
       {playlistArray.length > 0 && (
@@ -88,12 +97,13 @@ export default App;
 // const { getPlaylistById, playlists, error, loading } = usePlaylist();
 
 //   useEffect(() => {
-//     getPlaylistById("PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR");
-//     getPlaylistById("PL-J2q3Ga50oMQa1JdSJxYoZELwOJAXExP");
-//     getPlaylistById("PL6QREj8te1P5k_kIM2-8E4VP9Sej0Yez3");
-//     getPlaylistById("PLTjRvDozrdlxlMnoG9_yJKPMxMJu8FWRK");
-//     getPlaylistById("PLNYkxOF6rcICVl6Vb-AFlw81bQLuv6a_P");
-//     getPlaylistById("PLrClazTqVpJmJOUmYf6wvP1m-ay1y7ui2");
-//     getPlaylistById("PLYwpaL_SFmcD1pjNSpEm2pje3zPrSiflZ");
-//     getPlaylistById("PLBAZWBMYeVYisKf6EuZEGbpbU52dwdxJs");
+//     Id = "PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR";
+//     Id = "PL-J2q3Ga50oMQa1JdSJxYoZELwOJAXExP";
+//     Id = "PL6QREj8te1P5k_kIM2-8E4VP9Sej0Yez3";
+//     Id = "PLTjRvDozrdlxlMnoG9_yJKPMxMJu8FWRK";
+//     Id = "PLNYkxOF6rcICVl6Vb-AFlw81bQLuv6a_P";
+//     Id = "PLrClazTqVpJmJOUmYf6wvP1m-ay1y7ui2";
+//     Id = "PLYwpaL_SFmcD1pjNSpEm2pje3zPrSiflZ";
+//     Id = "PLBAZWBMYeVYisKf6EuZEGbpbU52dwdxJs";
+//     Id = "PLG7HKKbpE8RINBexLm8zmniqvXoxS7eqv";
 //   }, []);
