@@ -2,41 +2,32 @@ import { action, persist, thunk } from "easy-peasy";
 import getPlayList from "../api";
 
 const playlistModel = persist({
-  items: [],
-  id: "",
-  title: "",
-  description: "",
-  thumbnail: "",
-  channelId: "",
-  channelTitle: "",
-  setPlaylistData: action((state, payload) => {
-    state = { ...payload };
-    return state;
+  data: {},
+  error: "",
+  isLoading: false,
+  setLoading: action((state, payload) => {
+    state.isLoading = payload;
   }),
-  getPlaylistData: thunk(async ({ setPlaylistData }, payload) => {
-    const {
-      playlistId,
-      playlistTitle,
-      playlistDescription,
-      playlistThumbnail,
-      channelId,
-      channelTitle,
-      playListItems,
-    } = await getPlayList(payload);
-    setPlaylistData({
-      items: playListItems,
-      id: playlistId,
-      title: playlistTitle,
-      description: playlistDescription,
-      thumbnail: playlistThumbnail,
-      channelId,
-      channelTitle,
-    });
+  setError: action((state, payload) => {
+    state.error = payload;
+  }),
+  addPlaylist: action((state, payload) => {
+    state.data[payload.playlistId] = payload;
+  }),
+  getPlaylist: thunk(async ({ addPlaylist, setLoading, setError }, playlistId, { getState }) => {
+    if (getState().data[playlistId]) return;
+
+    setLoading(true)
+    try {
+      const playlist = await getPlayList(playlistId);
+      addPlaylist(playlist);
+    } catch (err) {
+      setError(e.response?.data?.error?.message || "Something went wrong");
+    } finally{setLoading(false)}
   }),
 });
 
 export default playlistModel;
 
-const recentModel = {};
 
-const favortiteModel = {};
+

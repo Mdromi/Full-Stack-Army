@@ -12,13 +12,6 @@ import PlaylistCardItem from "./components/playlist-card-item/playlist-card-item
 import usePlaylist from "./hooks/usePlaylist";
 
 const HomePage = ({ playlistArray }) => {
-  const playlist = useStoreActions((actions) => actions.playlist);
-  const Id = "PLG7HKKbpE8RINBexLm8zmniqvXoxS7eqv";
-  useEffect(() => {
-    playlist.getPlaylistData(Id);
-    console.log("This Called", playlist.getPlaylistData(Id));
-  }, []);
-
   return (
     <Container maxWidth={"md"} sx={{ marginTop: 16 }}>
       {playlistArray.length > 0 && (
@@ -71,6 +64,12 @@ const PlayerPage = ({ playlists }) => {
 
 function App() {
   const { getPlaylistById, playlists, error } = usePlaylist();
+  const playlist = useStoreActions((actions) => actions.playlist);
+  const Id = "PLG7HKKbpE8RINBexLm8zmniqvXoxS7eqv";
+  useEffect(() => {
+    playlist.getPlaylist(Id);
+    console.log("This Called", playlist.data);
+  }, []);
 
   if (error) console.log("ERROR:- ", error);
 
