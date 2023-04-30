@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 **node_modules
+65.introduction-strapi
 
 # testing
 /coverage
